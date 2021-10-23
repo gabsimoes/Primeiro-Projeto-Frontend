@@ -1,0 +1,24 @@
+<h1>Seja bem-vindo ao curso de Angular!</h1>
+<h4 class="text-danger">{{anuncio}}</h4>
+
+<div class="card" style="width: 18rem;">
+    <img [src]="foto" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{nomeProduto | uppercase}}</h5>
+
+        <!--início do IF/ELSE-->
+        <span *ngIf="promocao ; else elseBlock" class="badge badge-success">Promoção!</span>
+
+        <ng-template #elseBlock>
+            <span class="badge badge-primary">Aproveite!</span>
+        </ng-template>
+        <!--fim do IF/ELSE-->
+
+        <p class="card-text">Identificação: {{idProduto | number: '2.0-0'}}<br> Validade: {{dataValidade | date: 'dd/MM/yyyy'}}
+
+
+        </p>
+        <!--{minIntegerDigits}.{minFractionDigits}-{maxFractionDigits}-->
+        <a href="#" class="btn btn-primary">{{precoProduto | currency: 'BRL'}}</a>
+    </div>
+</div>
