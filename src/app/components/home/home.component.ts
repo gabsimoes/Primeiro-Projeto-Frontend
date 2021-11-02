@@ -24,6 +24,17 @@ export class HomeComponent implements OnInit {
     console.log('Preço:', this.precoProduto);
     console.log('Promoção:', this.promocao);
 
+
+    /*const idade = 10;
+    function imprimeIdade() {
+
+    for (const idade = 20; idade <= 25; idade++) {
+      console.log('Idade dentro do for:', idade)
+      }
+      console.log('Idade fora do for:', idade)
+      }
+     imprimeIdade()*/
+
 }
 
 
